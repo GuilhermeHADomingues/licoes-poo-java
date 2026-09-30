@@ -1,47 +1,27 @@
 # Lições de POO em Java
 
-Exercícios da minha jornada de estudos em **Programação Orientada a Objetos com Java**, organizados por lição. Cada lição tem uma classe de domínio e um `Menu` de console para testá-la.
+Repositório com os exercícios de **Programação Orientada a Objetos (POO) em Java** que estou fazendo durante meus estudos e no curso de ADS na Facens.
 
-## Conteúdo
+**Tecnologias:** Java, IntelliJ IDEA, Git e GitHub.
 
-| Lição | Tema | O que pratica |
-|---|---|---|
-| [Licao1](src/Licao1) | Pessoa | Classe com atributos `private`, getters e setters, menu com `Scanner` |
-| [Licao2](src/Licao2) | Aluno | Média ponderada (AC1 15%, AC2 30%, AG 10%, AF 45%) e verificação de aprovação |
-| [Licao3](src/Licao3) | Funcionário | Horista x mensalista, cálculo de salário com desconto, alteração de remuneração |
-| [Licao4](src/Licao4) | Curso e Aluno | Composição com `ArrayList`, inserir e remover alunos de um curso pelo RA |
-| [Licao5](src/Licao5) | Pessoa e Automóvel | Associação entre classes, lista de automóveis por pessoa e transferência entre pessoas |
-| [Licao6](src/Licao6) | Herança: Funcionário | Classe abstrata, subclasses `FuncionarioHorista` e `FuncionarioMensalista`, `super` e polimorfismo |
-| [Licao7](src/Licao7) | Herança: Imóvel | Métodos abstratos, `ImovelNovo` (valor adicional) e `ImovelVelho` (desconto), leitura de entrada com validação |
+## Lições
+
+Cada lição fica em uma pasta dentro de `src/`.
+
+| Pasta | Tema |
+|-------|------|
+| `Licao1` | Exercícios iniciais de POO |
+| `Licao2` | Exercícios de POO |
+| `Licao3` | Exercícios de POO |
+| `Licao4` | Classes `Curso` e `Aluno` |
+| `Licao5` | Classes `Pessoa` e `Automovel` |
+| `Licao6` | Classe `Funcionario`, com métodos de folha de pagamento e menu interativo |
+| `Licao7` | **Herança:** `FormaGeometrica`, `Retangulo` e `Circulo`, com menu interativo e polimorfismo |
 
 ## Como executar
 
-É preciso ter o JDK instalado. A partir da pasta `src`:
-
-```bash
-cd src
-javac Licao1/*.java
-java Licao1.Menu
-```
-
-Troque `Licao1` por `Licao2` até `Licao7` para rodar as outras.
-
-## Estrutura
-
-```
-licoes-poo-java/
-├── README.md
-├── .gitignore
-└── src/
-    ├── Licao1/  (Pessoa.java, Menu.java)
-    ├── Licao2/  (Aluno.java, Menu.java)
-    ├── Licao3/  (Funcionario.java, Menu.java)
-    ├── Licao4/  (Aluno.java, Cursos.java, Menu.java)
-    ├── Licao5/  (Pessoa.java, Automovel.java, Menu.java)
-    ├── Licao6/  (Funcionario.java, FuncionarioHorista.java, FuncionarioMensalista.java, Menu.java)
-    └── Licao7/  (Imovel.java, ImovelNovo.java, ImovelVelho.java, Menu.java)
-```
+Abra o projeto no IntelliJ IDEA e execute a classe que tem o método `main` da lição desejada (nas lições com menu, a classe `Menu`).
 
 ## Autor
 
-Guilherme Henrique — [GitHub](https://github.com/GuilhermeHADomingues) · [LinkedIn](https://linkedin.com/in/guilhermeadomingues)
+Guilherme Henrique Andrade Domingues - [GuilhermeHADomingues](https://github.com/GuilhermeHADomingues)
