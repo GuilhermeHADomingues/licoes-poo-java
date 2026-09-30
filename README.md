@@ -1,56 +1,27 @@
-# Lição 6 - Herança com Formas Geométricas
+# Lições de POO em Java
 
-Programa em Java que usa **herança** e **polimorfismo** para cadastrar formas geométricas (retângulos e círculos) e calcular a área de cada uma, por meio de um menu no console.
+Repositório com os exercícios de **Programação Orientada a Objetos (POO) em Java** que estou fazendo durante meus estudos e no curso de ADS na Facens.
 
-## Estrutura
+**Tecnologias:** Java, IntelliJ IDEA, Git e GitHub.
 
-```
-Licao6/
-├── FormaGeometrica.java   # Classe base
-├── Retangulo.java         # Herda de FormaGeometrica
-├── Circulo.java           # Herda de FormaGeometrica
-└── Menu.java              # Classe com o main (menu interativo)
-```
+## Lições
 
-## Classes
+Cada lição fica em uma pasta dentro de `src/`.
 
-| Classe | Descrição |
-|--------|-----------|
-| `FormaGeometrica` | Classe base. Tem o método `calcularArea()`, que retorna `0` e é sobrescrito pelas filhas. |
-| `Retangulo` | Atributos `largura` e `altura`. Área = `largura * altura`. |
-| `Circulo` | Atributo `raio`. Área = `Math.PI * raio * raio`. |
-| `Menu` | Guarda até 10 formas em um array de `FormaGeometrica` e mostra o menu. |
-
-## Conceitos praticados
-
-- **Herança:** `Retangulo` e `Circulo` usam `extends FormaGeometrica`.
-- **Sobrescrita (`@Override`):** cada filha reescreve `calcularArea()` e `toString()`.
-- **Polimorfismo:** o array `FormaGeometrica[]` guarda retângulos e círculos juntos, e `calcularArea()` executa a versão de cada objeto.
-- **Encapsulamento:** atributos `private` com getters e setters.
-- **Menu interativo:** `Scanner`, `do-while` e `switch`.
-
-## Menu
-
-```
-===== MENU =====
-1 - Inserir e calcular área
-2 - Mostrar todas as formas inseridas
-3 - Sair
-```
-
-- **Opção 1:** escolha o tipo (1 - Retângulo, 2 - Círculo), informe as medidas e veja a área calculada.
-- **Opção 2:** lista todas as formas inseridas com a área de cada uma.
-- **Opção 3:** encerra o programa.
-
-O array comporta no máximo 10 formas. Quando enche, o programa avisa que não dá para inserir mais.
+| Pasta | Tema |
+|-------|------|
+| `Licao1` | Exercícios iniciais de POO |
+| `Licao2` | Exercícios de POO |
+| `Licao3` | Exercícios de POO |
+| `Licao4` | Classes `Curso` e `Aluno` |
+| `Licao5` | Classes `Pessoa` e `Automovel` |
+| `Licao6` | Classe `Funcionario`, com métodos de folha de pagamento e menu interativo |
+| `Licao7` | **Herança:** `FormaGeometrica`, `Retangulo` e `Circulo`, com menu interativo e polimorfismo |
 
 ## Como executar
 
-Pela linha de comando, dentro da pasta `src`:
+Abra o projeto no IntelliJ IDEA e execute a classe que tem o método `main` da lição desejada (nas lições com menu, a classe `Menu`).
 
-```bash
-javac Licao6/*.java
-java Licao6.Menu
-```
+## Autor
 
-Ou abra o projeto no IntelliJ IDEA e execute a classe `Menu`.
+Guilherme Henrique Andrade Domingues - [GuilhermeHADomingues](https://github.com/GuilhermeHADomingues)
