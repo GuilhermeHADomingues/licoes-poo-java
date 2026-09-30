@@ -1,47 +1,56 @@
-# Lições de POO em Java
+# Lição 6 - Herança com Formas Geométricas
 
-Exercícios da minha jornada de estudos em **Programação Orientada a Objetos com Java**, organizados por lição. Cada lição tem uma classe de domínio e um `Menu` de console para testá-la.
-
-## Conteúdo
-
-| Lição | Tema | O que pratica |
-|---|---|---|
-| [Licao1](src/Licao1) | Pessoa | Classe com atributos `private`, getters e setters, menu com `Scanner` |
-| [Licao2](src/Licao2) | Aluno | Média ponderada (AC1 15%, AC2 30%, AG 10%, AF 45%) e verificação de aprovação |
-| [Licao3](src/Licao3) | Funcionário | Horista x mensalista, cálculo de salário com desconto, alteração de remuneração |
-| [Licao4](src/Licao4) | Curso e Aluno | Composição com `ArrayList`, inserir e remover alunos de um curso pelo RA |
-| [Licao5](src/Licao5) | Pessoa e Automóvel | Associação entre classes, lista de automóveis por pessoa e transferência entre pessoas |
-| [Licao6](src/Licao6) | Herança: Funcionário | Classe abstrata, subclasses `FuncionarioHorista` e `FuncionarioMensalista`, `super` e polimorfismo |
-| [Licao7](src/Licao7) | Herança: Imóvel | Métodos abstratos, `ImovelNovo` (valor adicional) e `ImovelVelho` (desconto), leitura de entrada com validação |
-
-## Como executar
-
-É preciso ter o JDK instalado. A partir da pasta `src`:
-
-```bash
-cd src
-javac Licao1/*.java
-java Licao1.Menu
-```
-
-Troque `Licao1` por `Licao2` até `Licao7` para rodar as outras.
+Programa em Java que usa **herança** e **polimorfismo** para cadastrar formas geométricas (retângulos e círculos) e calcular a área de cada uma, por meio de um menu no console.
 
 ## Estrutura
 
 ```
-licoes-poo-java/
-├── README.md
-├── .gitignore
-└── src/
-    ├── Licao1/  (Pessoa.java, Menu.java)
-    ├── Licao2/  (Aluno.java, Menu.java)
-    ├── Licao3/  (Funcionario.java, Menu.java)
-    ├── Licao4/  (Aluno.java, Cursos.java, Menu.java)
-    ├── Licao5/  (Pessoa.java, Automovel.java, Menu.java)
-    ├── Licao6/  (Funcionario.java, FuncionarioHorista.java, FuncionarioMensalista.java, Menu.java)
-    └── Licao7/  (Imovel.java, ImovelNovo.java, ImovelVelho.java, Menu.java)
+Licao6/
+├── FormaGeometrica.java   # Classe base
+├── Retangulo.java         # Herda de FormaGeometrica
+├── Circulo.java           # Herda de FormaGeometrica
+└── Menu.java              # Classe com o main (menu interativo)
 ```
 
-## Autor
+## Classes
 
-Guilherme Henrique — [GitHub](https://github.com/GuilhermeHADomingues) · [LinkedIn](https://linkedin.com/in/guilhermeadomingues)
+| Classe | Descrição |
+|--------|-----------|
+| `FormaGeometrica` | Classe base. Tem o método `calcularArea()`, que retorna `0` e é sobrescrito pelas filhas. |
+| `Retangulo` | Atributos `largura` e `altura`. Área = `largura * altura`. |
+| `Circulo` | Atributo `raio`. Área = `Math.PI * raio * raio`. |
+| `Menu` | Guarda até 10 formas em um array de `FormaGeometrica` e mostra o menu. |
+
+## Conceitos praticados
+
+- **Herança:** `Retangulo` e `Circulo` usam `extends FormaGeometrica`.
+- **Sobrescrita (`@Override`):** cada filha reescreve `calcularArea()` e `toString()`.
+- **Polimorfismo:** o array `FormaGeometrica[]` guarda retângulos e círculos juntos, e `calcularArea()` executa a versão de cada objeto.
+- **Encapsulamento:** atributos `private` com getters e setters.
+- **Menu interativo:** `Scanner`, `do-while` e `switch`.
+
+## Menu
+
+```
+===== MENU =====
+1 - Inserir e calcular área
+2 - Mostrar todas as formas inseridas
+3 - Sair
+```
+
+- **Opção 1:** escolha o tipo (1 - Retângulo, 2 - Círculo), informe as medidas e veja a área calculada.
+- **Opção 2:** lista todas as formas inseridas com a área de cada uma.
+- **Opção 3:** encerra o programa.
+
+O array comporta no máximo 10 formas. Quando enche, o programa avisa que não dá para inserir mais.
+
+## Como executar
+
+Pela linha de comando, dentro da pasta `src`:
+
+```bash
+javac Licao6/*.java
+java Licao6.Menu
+```
+
+Ou abra o projeto no IntelliJ IDEA e execute a classe `Menu`.
