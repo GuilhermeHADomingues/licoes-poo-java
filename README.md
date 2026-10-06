@@ -16,7 +16,7 @@ Cada lição fica em uma pasta dentro de `src/`.
 | `Licao4` | Classes `Curso` e `Aluno` |
 | `Licao5` | Classes `Pessoa` e `Automovel` |
 | `Licao6` | Classe `Funcionario`, com métodos de folha de pagamento e menu interativo |
-| `Licao7` | **Herança:** `FormaGeometrica`, `Retangulo` e `Circulo`, com menu interativo e polimorfismo |
+| `Licao7` | **Herança:** `Imóvel`, `ImovelVelho` e `imovelNovo`, com menu interativo e polimorfismo |
 
 ## Como executar
 
